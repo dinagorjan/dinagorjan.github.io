@@ -282,11 +282,6 @@
 
         /* ── Map ───────────────────────────────────────────────── */
         .map-outer { padding: 0 24px 72px; max-width: 860px; margin: 0 auto; text-align: center; }
-        .map-frame {
-            width: 100%; border-radius: 3px; overflow: hidden;
-            box-shadow: 0 4px 32px color-mix(in srgb, var(--p5) 10%, transparent);
-        }
-        .map-frame iframe { width: 100%; height: 380px; border: 0; display: block; }
         .directions-link {
             display: inline-block; margin-top: 18px;
             font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
@@ -330,7 +325,6 @@
 
         @media (max-width: 600px) {
             .section { padding: 56px 20px; }
-            .map-frame iframe { height: 280px; }
         }
     </style>
 </head>
@@ -401,7 +395,7 @@
     </p>
     <h2>
         <span data-lang="en">Join us for our celebration</span>
-        <span data-lang="mk">Придружете ни се на прославата</span>
+        <span data-lang="mk">Придружете ни се на нашата прослава</span>
     </h2>
     <div class="details-grid">
         <div class="detail-item reveal">
@@ -428,18 +422,14 @@
                     <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
                 </svg>
             </div>
-            <span class="detail-title"><span data-lang="en">Venue</span><span data-lang="mk">Место</span></span>
+            <span class="detail-title"><span data-lang="en">Venue</span><span data-lang="mk">Локација</span></span>
             <span class="detail-value">Vodenica Mulino<br><small>Митрополит Теодосиј Гологанов 69<br>Скопје</small></span>
         </div>
     </div>
 </div>
 
-<!-- ── Map ───────────────────────────────────────────────────────── -->
+<!-- ── Directions ────────────────────────────────────────────────── -->
 <div class="map-outer reveal">
-    <div class="map-frame">
-        <iframe src="https://maps.google.com/maps?q=Vodenica+Mulino+Mitropolit+Teodosij+Gologanov+69+Skopje&output=embed&hl=en"
-            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vodenica Mulino, Skopje"></iframe>
-    </div>
     <a class="directions-link" href="https://maps.google.com/?q=Mitropolit+Teodosij+Gologanov+69,+Skopje+1000,+North+Macedonia" target="_blank" rel="noopener noreferrer">
         <span data-lang="en">↗ Get directions</span>
         <span data-lang="mk">↗ Добијте насоки</span>
@@ -451,15 +441,15 @@
     <div style="max-width: 520px; width: 100%;">
         <p class="section-label">
             <span data-lang="en">Will you join us?</span>
-            <span data-lang="mk">Ќе се придружите?</span>
+            <span data-lang="mk">Ќе ни се придружите?</span>
         </p>
         <h2>
             <span data-lang="en">RSVP</span>
-            <span data-lang="mk">Потврди присуство</span>
+            <span data-lang="mk">RSVP</span>
         </h2>
         <p class="body-text">
-            <span data-lang="en">Please let us know if you'll be joining us.</span>
-            <span data-lang="mk">Ве молиме известете не дали ќе ни се придружите.</span>
+            <span data-lang="en">Kindly confirm your attendance by 10.09.2026</span>
+            <span data-lang="mk">Ве молиме потврдете го Вашето присуство до 10.09.2026</span>
         </p>
         <a href="https://forms.gle/FK3ANws6EtcL3gih6" class="rsvp-btn" target="_blank" rel="noopener">
             <span data-lang="en">Confirm attendance</span>
