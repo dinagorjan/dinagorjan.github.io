@@ -102,7 +102,7 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                color-mix(in srgb, var(--p5) 20%, transparent) 0%,
+                color-mix(in srgb, var(--p5) 45%, transparent) 0%,
                 color-mix(in srgb, var(--p5)  8%, transparent) 40%,
                 color-mix(in srgb, var(--p5) 45%, transparent) 100%
             );
@@ -112,6 +112,12 @@
             z-index: 1;
             color: var(--p2);
             padding: 24px;
+            text-shadow:
+                -2px -2px 3px var(--p5),
+                 2px -2px 3px var(--p5),
+                -2px  2px 3px var(--p5),
+                 2px  2px 3px var(--p5),
+                 0 3px 20px color-mix(in srgb, var(--p5) 85%, transparent);
         }
         .hero-eyebrow {
             font-size: 11px;
@@ -337,7 +343,10 @@
             <span data-lang="en">We are getting married!</span>
             <span data-lang="mk">Ќе правиме свадба!</span>
         </p>
-        <h1 class="hero-names">Dina <span class="hero-amp">&amp;</span> Gorjan</h1>
+        <h1 class="hero-names">
+            <span data-lang="en">Dina <span class="hero-amp">&amp;</span> Gorjan</span>
+            <span data-lang="mk">Дина <span class="hero-amp">и</span> Горјан</span>
+        </h1>
         <p class="hero-date">10 &thinsp;·&thinsp; 10 &thinsp;·&thinsp; 2026</p>
     </div>
     <a class="hero-scroll" href="#countdown" aria-label="Scroll down">
@@ -404,8 +413,8 @@
                     <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
             </div>
-            <span class="detail-title"><span data-lang="en">Start time</span><span data-lang="mk">Почеток</span></span>
-            <span class="detail-value">19:30 h</span>
+            <span class="detail-title"><span data-lang="en">Guests arrival</span><span data-lang="mk">Прием на гости</span></span>
+            <span class="detail-value">19:00 h</span>
         </div>
         <div class="detail-item reveal">
             <div class="detail-icon" aria-hidden="true">
@@ -443,8 +452,8 @@
             <span data-lang="mk">Потврди присуство</span>
         </h2>
         <p class="body-text">
-            <span data-lang="en">Please let us know if you'll be joining us. We'd love to celebrate this day with you.</span>
-            <span data-lang="mk">Ве молиме известете ни дали ќе ни се придружите. Со задоволство ќе го прославиме овој ден со вас.</span>
+            <span data-lang="en">Please let us know if you'll be joining us.</span>
+            <span data-lang="mk">Ве молиме известете ни дали ќе ни се придружите.</span>
         </p>
         <a href="https://forms.gle/FK3ANws6EtcL3gih6" class="rsvp-btn" target="_blank" rel="noopener">
             <span data-lang="en">Confirm attendance</span>
@@ -455,7 +464,10 @@
 
 <!-- ── Footer ────────────────────────────────────────────────────── -->
 <footer>
-    <p class="footer-names">Dina &amp; Gorjan</p>
+    <p class="footer-names">
+        <span data-lang="en">Dina &amp; Gorjan</span>
+        <span data-lang="mk">Дина и Горјан</span>
+    </p>
     <p class="footer-meta">10 · 10 · 2026 &nbsp;·&nbsp; Skopje</p>
 </footer>
 
@@ -470,7 +482,7 @@
     const savedLang = localStorage.getItem('lang');
     if (savedLang === 'mk') setLang('mk');
 
-    const WEDDING = new Date('2026-10-10T19:30:00');
+    const WEDDING = new Date('2026-10-10T19:00:00');
     function pad(n) { return String(n).padStart(2, '0'); }
     function tick() {
         const diff = WEDDING - new Date();
